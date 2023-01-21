@@ -97,7 +97,6 @@ expect {
         puts "sending password"
         send "$productionPassword\r"
         exp_continue
-        exit 0
     }
 
     # sending password to execute sudo command on remote machine
