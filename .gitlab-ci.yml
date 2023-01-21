@@ -28,3 +28,4 @@ my_style:
     - cd ../grep
     - clang-format -n s21_grep.c &>> clang_output.txt
     - bash check_styletest_output.sh
+  allow_failure: false
