@@ -1,2 +1,9 @@
 stages:
   - build
+
+my_build:
+  script:
+    - cd src/cat
+    - make
+    - cd ../grep
+    - make
