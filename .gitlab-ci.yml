@@ -3,6 +3,8 @@ stages:
 
 my_build:
   stage: build
+  tags:
+    - build_tag
   script:
     - cd src/cat
     - make
