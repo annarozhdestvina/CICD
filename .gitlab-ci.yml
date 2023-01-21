@@ -2,6 +2,7 @@ stages:
   - build
   - style
   - test
+  - deploy
 
 my_build:
   stage: build
