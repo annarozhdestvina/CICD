@@ -24,8 +24,12 @@ my_style:
   script:
     - cd src/cat
     - clang-format -n s21_cat.c &>> clang_output.txt
-    - bash check_styletest_output.sh
+    - cat clang_output.txt
     - cd ../grep
     - clang-format -n s21_grep.c &>> clang_output.txt
+    - cat clang_output.txt
+    - cd ../cat
+    - bash check_styletest_output.sh
+    - cd ../grep
     - bash check_styletest_output.sh
   allow_failure: false
