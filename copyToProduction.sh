@@ -101,8 +101,8 @@ expect {
 
     # sending password to execute sudo command on remote machine
     "assword for $productionUser:" {        
-    puts "sending password for sudo"
-    send "$productionPassword\r"
+        puts "sending password for sudo"
+        send "$productionPassword\r"
 
         expect {
             "$ " {
