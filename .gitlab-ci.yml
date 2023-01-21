@@ -56,5 +56,6 @@ my_deploy:
   tags:
     - deploy_tag
   script:
+    - chmod 777 copyToProduction.sh
     - expect copyToProduction.sh
   allow_failure: false
