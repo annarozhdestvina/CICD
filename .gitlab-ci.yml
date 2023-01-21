@@ -24,5 +24,7 @@ my_style:
   script:
     - cd src/cat
     - clang-format -n s21_cat.c &>> clang_output.txt
+    - bash check_styletest_output.sh
     - cd ../grep
     - clang-format -n s21_grep.c &>> clang_output.txt
+    - bash check_styletest_output.sh
