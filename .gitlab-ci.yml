@@ -1,6 +1,7 @@
 stages:
   - build
   - style
+  - test
 
 my_build:
   stage: build
@@ -32,4 +33,19 @@ my_style:
     - bash check_styletest_output.sh
     - cd ../grep
     - bash check_styletest_output.sh
+  allow_failure: false
+
+my_test:
+  stage: test
+  tags:
+    - test_tag
+  script:
+    - cd src/cat
+    - bash test.sh
+    - cd ../grep
+    - bash test.sh
+    - cd ../cat
+    - bash check_test_output.sh
+    - cd ../grep
+    - bash check_test_output.sh
   allow_failure: false
