@@ -118,7 +118,7 @@ void grep_file(struct flags *_flags, char *pattern, char *file) {
   int cflags = (_flags->is_i) ? REG_ICASE | REG_EXTENDED : REG_EXTENDED;
   regex_t reg;
   FILE *fp;
-  fp = fopen(file, "r");
+      fp = fopen(file, "r");
 
   if (fp == NULL) {
   } else {
