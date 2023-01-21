@@ -2,6 +2,7 @@ stages:
   - build
 
 my_build:
+  stage: build
   script:
     - cd src/cat
     - make
