@@ -1,5 +1,6 @@
 stages:
   - build
+  - style
 
 my_build:
   stage: build
@@ -15,3 +16,13 @@ my_build:
         - src/cat/s21_cat
         - src/grep/s21_grep
       expire_in: 30 days
+
+my_style:
+  stage: style
+  tags:
+    - style_tag
+  script:
+    - cd src/cat
+    - clang-format -n s21_cat.c &>> clang_output.txt
+    - cd ../grep
+    - clang-format -n s21_grep.c &>> clang_output.txt
