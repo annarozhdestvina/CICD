@@ -67,4 +67,4 @@ my_deploy:
   allow_failure: false
   when: manual
   after_script:
-    - bash notify.sh
+    - bash notify.sh 
